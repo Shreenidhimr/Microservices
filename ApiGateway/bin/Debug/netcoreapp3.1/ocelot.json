@@ -1,0 +1,45 @@
+{
+	"ReRoutes": [
+		//Employee
+		{
+			"DownstreamPathTemplate": "/api/Employee/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5002
+				}
+			],
+			"UpstreamPathTemplate": "/Employee/{catchAll}"
+
+		},
+		// Order
+		{
+			"DownstreamPathTemplate": "/api/Project/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5003
+				}
+			],
+			"UpstreamPathTemplate": "/Project/{catchAll}"
+
+		},
+		{
+			"DownstreamPathTemplate": "/api/Login/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 50493
+				}
+			],
+			"UpstreamPathTemplate": "/Login/{catchAll}"
+
+		}
+	],
+	"GlobalConfiguration": {
+		"BaseUrl": "http://localhost:5001"
+	}
+}
